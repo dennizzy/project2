@@ -1,0 +1,10 @@
+<h2><%= @team.school_name %></h2>
+<h4><%= @team.state %></h4>
+
+<img class='team-photo' src="<%= @team.photo_url %>">
+
+<h3>Players <%= link_to "(+)", new_team_player_path(@team) %></h3>
+<ul>
+  <% @team.players.each do |player| %>
+  <% end %>
+</ul>

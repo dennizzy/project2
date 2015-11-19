@@ -1,0 +1,17 @@
+<p class="alert"><%= @team.errors.full_messages.first if @team.errors.any? %></p>
+<ul>
+<%= form_for @team do |f| %>
+
+  <%= f.label :school_name %>
+  <%= f.text_field :school_name %>
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+
+  <%= f.submit %>
+
+<% end %>
+</ul>
