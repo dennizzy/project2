@@ -59,3 +59,4 @@ class PlayersController < ApplicationController
 	end
 
 end
+# code looks good to me!!!
