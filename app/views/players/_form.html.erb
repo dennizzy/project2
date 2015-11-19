@@ -1,0 +1,21 @@
+<%= form_for([@team, @player]) do |f| %>
+  <p class="alert"><%= @player.errors.full_messages.first if @player.errors.any? %></p>
+<ul>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :photo_url %>
+	<%= f.text_field :photo_url %>
+
+	<%= f.label :position %>
+	<%= f.text_field :position %>
+
+	<%= f.label :year %>
+	<%= f.text_field :year %>
+
+	<%= f.label :age %>
+	<%= f.text_field :age %>
+
+	<%= f.submit %>
+</ul>
+<% end %>

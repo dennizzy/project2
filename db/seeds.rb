@@ -17,11 +17,16 @@ george_mason = Team.create!(
         photo_url: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/George_Mason_Patriots_logo.svg/1229px-George_Mason_Patriots_logo.svg.png",
         state: "Virginia")
 
+umcp = Team.create!(                    
+		school_name: "University of Maryland, College Park",
+        photo_url: "http://s7d2.scene7.com/is/image/Fathead/lgo_ncaa_maryland_terrapins?layer=comp&fit=constrain&hei=300&wid=300&fmt=png-alpha&qlt=95,0&op_sharpen=1&resMode=bicub&op_usm=0.0,0.0,0,0&iccEmbed=0",
+        state: "Maryland")
+
 dennis = Player.create!(
 		name: "Dennis Truong",
 		photo_url: "http://lh6.googleusercontent.com/-rpwI4wltXUM/AAAAAAAAAAI/AAAAAAAADXA/l96ETHD93vk/photo.jpg?sz=300",
 		position: "Safety",
 		year: "Alumni",
 		age: 25,
-		team: george_mason
+		team: umcp
 	)

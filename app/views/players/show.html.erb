@@ -1,0 +1,10 @@
+<h2><%= @player.name %> <%= link_to "(edit)", edit_player_path(@player) %></h2>
+<h3><%= link_to @team.school_name, @team %></h3>
+
+<ul><img class='player-photo' src="<%= @player.photo_url %>"></ul>
+
+<ul>
+	<h4><li>Position: <%= @player.position %></li></h4>
+	<h4><li>Year: <%= @player.year %></li></h4>
+	<h4><li>Age: <%= @player.age %></li></h4>
+</ul>

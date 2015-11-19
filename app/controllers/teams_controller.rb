@@ -11,7 +11,7 @@ class TeamsController < ApplicationController
   	def create
 	    @team = Team.new(team_params)
 	    if @team.save
-	      flash[:notice] = "#{@team.name} was successfully created."
+	      flash[:notice] = "#{@team.school_name} was successfully created."
 	      redirect_to @team
 	    else
 	      render :new
@@ -20,6 +20,17 @@ class TeamsController < ApplicationController
 
   	def show
     	@team = Team.find(params[:id])
+	end
+
+  	def destroy
+	    @team = Team.find(params[:id])
+	    @team.destroy
+	    redirect_to teams_path
+  	end
+
+	private
+		def team_params
+		params.require(:team).permit(:school_name, :photo_url, :state)
 	end
 
 end

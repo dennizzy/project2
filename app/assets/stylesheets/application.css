@@ -28,14 +28,14 @@ img {
 }
 
  nav a {
-   border: 1px solid black;
-   margin: .5em;
-   padding: .5em;
+   border: 0px solid black;
+   margin: .2px;
+   padding: .2px;
    background-color: #eeeeee;
  }
 
  nav a:hover {
-   background-color: orange;
+   background-color: transparent;
    color: blue;
  }
 
@@ -53,7 +53,7 @@ img {
  }
 
  li {
-   margin: .25em;
+   margin: 3px;
  }
 
  h1 {
