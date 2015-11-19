@@ -31,12 +31,12 @@ img {
    border: 0px solid black;
    margin: .2px;
    padding: .2px;
-   background-color: #eeeeee;
+   background-color: transparent;
  }
 
  nav a:hover {
-   background-color: transparent;
-   color: blue;
+   background-color: blue;
+   color: white;
  }
 
  a, a:visited {
