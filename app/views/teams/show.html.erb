@@ -1,4 +1,4 @@
-<h2><%= @team.school_name %></h2>
+<h2><%= @team.school_name %> <%= link_to "(edit)", edit_team_path(@team) %></h2>
 <h4><%= @team.state %></h4>
 
 <img class='team-photo' src="<%= @team.photo_url %>">
