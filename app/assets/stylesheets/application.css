@@ -19,8 +19,13 @@ body{
    max-width: 50em;
    margin:auto;
    padding:2em 1em;
-   background-color: lemonchiffon;
+   background-color: #fff;
  }
+
+img {
+	width: auto;
+	height: 300px;
+}
 
  nav a {
    border: 1px solid black;

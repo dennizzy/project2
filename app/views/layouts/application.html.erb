@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project2</title>
+  <title>VSA Turkey Bowl Tournament Website</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1>VSA Turkey Bowl Tournament Website</h1>
+  <%= image_tag "http://cdn.shopify.com/s/files/1/0152/7713/products/FOOTBALL_Transparent_Element_copy_1024x1024.jpg?v=1343300540" %>
+  <nav>
+    <a href="/players">Players</a>
+    <a href="/teams">Teams</a>
 
 <%= yield %>
 
