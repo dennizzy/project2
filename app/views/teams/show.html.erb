@@ -6,6 +6,13 @@
 <h3>Players <%= link_to "(+)", new_team_player_path(@team) %></h3>
 <ul>
   <% @team.players.each do |player| %>
-  		<%= link_to player.name, player_path(player) %>
+	<li>	
+		<%= link_to player.name, player_path(player) %>
+		<% if player.favorites.length > 0 %>
+			<%= link_to "&diams;".html_safe, remove_favorite_player_path(player), method: :delete, class: "fav" %>
+		<% else %>
+			<%= link_to "&diams;".html_safe, add_favorite_player_path(player), method: :post, class: "no-fav" %>
+		<% end %>
+	</li>
   <% end %>
 </ul>

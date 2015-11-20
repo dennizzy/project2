@@ -27,10 +27,12 @@ class TeamsController < ApplicationController
 
 	def edit
 		@team = Team.find(params[:id])
+		authorize! :update, @team
 	end
 
 	def update
 		@team = Team.find(params[:id])
+		authorize! :update, @team
 		if @team.update(team_params)
 		  flash[:notice] = "#{@team.school_name} was successfully updated."
 		  redirect_to @team

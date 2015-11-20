@@ -7,22 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1>VSA Turkey Bowl Tournament Website</h1>
-  <%= image_tag "http://cdn.shopify.com/s/files/1/0152/7713/products/FOOTBALL_Transparent_Element_copy_1024x1024.jpg?v=1343300540" %>
+
   <nav>
     <a href="/players">Players</a>
     <a href="/teams">Teams</a>
     <div class="user-info">
-	  <% if current_user %>
-	    Welcome, <%= current_user.email %>
-	    <%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
-	  <% else %>
-	    <%= link_to 'Signup', new_user_registration_path %>
-	    <%= link_to 'Login', new_user_session_path %>
-  <% end %>      
-</div>
-</nav>
+      <% if current_user %>
+        Welcome, <%= current_user.email %>
+        <%= link_to 'Signout', destroy_user_session_path, :method => :delete %>
+      <% else %>
+        <%= link_to 'Signup', new_user_registration_path %>
+        <%= link_to 'Login', new_user_session_path %>
+      <% end %>      
+    </div>
+  </nav>
 
+  <h1>VSA Turkey Bowl Tournament Website</h1>
+  <%= image_tag "http://cdn.shopify.com/s/files/1/0152/7713/products/FOOTBALL_Transparent_Element_copy_1024x1024.jpg?v=1343300540" %>
 
 <%= yield %>
 

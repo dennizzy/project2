@@ -1,7 +1,8 @@
 <h2>Edit Team</h2>
 
-
 <%= render 'form' %>
 
-<%= link_to 'Delete!', team_path(@team), method: :delete, class: 'delete' %>
+<% if can? :destroy, @team %>
+	<%= link_to 'Delete!', team_path(@team), method: :delete, class: 'delete' %>
+<% end %>
 

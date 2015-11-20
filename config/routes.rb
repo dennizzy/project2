@@ -5,5 +5,10 @@ Rails.application.routes.draw do
 	    resources :players, only: [:create, :new, :update]
 	  end
 	  
-	  resources :players, only: [:index, :edit, :show, :destroy]
+	  resources :players, only: [:index, :edit, :show, :destroy] do
+    		member do
+      		post 'add_favorite'
+      		delete 'remove_favorite'
+    end
+  end
 end
