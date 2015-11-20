@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
 	devise :database_authenticatable, :registerable,
      	:recoverable, :rememberable, :trackable, :validatable
     has_many :teams
+    has_many :favorites
+  	has_many :players, through: :favorites
 end

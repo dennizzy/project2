@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120113541) do
+ActiveRecord::Schema.define(version: 20151120114101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "favorites", force: :cascade do |t|
-    t.integer "team_id"
+    t.integer "user_id"
     t.integer "player_id"
   end
 
   add_index "favorites", ["player_id"], name: "index_favorites_on_player_id", using: :btree
-  add_index "favorites", ["team_id"], name: "index_favorites_on_team_id", using: :btree
+  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id", using: :btree
 
   create_table "players", force: :cascade do |t|
     t.string  "name"
@@ -59,6 +59,6 @@ ActiveRecord::Schema.define(version: 20151120113541) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "favorites", "players"
-  add_foreign_key "favorites", "teams"
+  add_foreign_key "favorites", "users"
   add_foreign_key "players", "teams"
 end
