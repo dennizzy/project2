@@ -11,7 +11,7 @@ class TeamsController < ApplicationController
 
   	def create
 	    @team = Team.new(team_params)
-	    authorize! :create, @article
+	    authorize! :create, @team
 	    if @team.save
 	      flash[:notice] = "#{@team.school_name} was successfully created."
 	      redirect_to @team
@@ -25,9 +25,23 @@ class TeamsController < ApplicationController
     	authorize! :read, @team
 	end
 
+	def edit
+		@team = Team.find(params[:id])
+	end
+
+	def update
+		@team = Team.find(params[:id])
+		if @team.update(team_params)
+		  flash[:notice] = "#{@team.school_name} was successfully updated."
+		  redirect_to @team
+		else
+		  render :edit
+		end
+	end	
+
   	def destroy
 	    @team = Team.find(params[:id])
-	    authorize! :destroy, @article
+	    authorize! :destroy, @team
 	    @team.destroy
 	    redirect_to teams_path
   	end
