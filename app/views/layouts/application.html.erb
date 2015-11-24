@@ -9,6 +9,7 @@
 <body>
 
   <nav>
+    <!-- NHO: How could we utilize rails helpers to do links the 'rails' way?  -->
     <a href="/players">Players</a>
     <a href="/teams">Teams</a>
     <div class="user-info">
@@ -18,7 +19,7 @@
       <% else %>
         <%= link_to 'Signup', new_user_registration_path %>
         <%= link_to 'Login', new_user_session_path %>
-      <% end %>      
+      <% end %>
     </div>
   </nav>
 

@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
 	devise :database_authenticatable, :registerable,
      	:recoverable, :rememberable, :trackable, :validatable
-    has_many :teams
+    has_many :teams # NHO: I understand this assocation, but I don't think our schema reflects this.
     has_many :favorites
   	has_many :players, through: :favorites
 end

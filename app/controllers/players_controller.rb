@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-
+	# NHO: CanCanCan, nice! How could we utilize CanCanCan's helpers to dry up our controllers code?
 	def index
 		@players = Player.all
 	end
