@@ -2,7 +2,7 @@
 
 <%= render 'form' %>
 
+<!-- NHO: nice cancancan helper in the view!  -->
 <% if can? :destroy, @team %>
 	<%= link_to 'Delete!', team_path(@team), method: :delete, class: 'delete' %>
 <% end %>
-

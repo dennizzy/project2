@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 	  resources :teams do
 	    resources :players, only: [:create, :new, :update]
 	  end
-	  
+
+    # NHO: What's the functionality of `favoriting` a player? Is there an interface to see a users `favorite_players`?
 	  resources :players, only: [:index, :edit, :show, :destroy] do
     		member do
       		post 'add_favorite'

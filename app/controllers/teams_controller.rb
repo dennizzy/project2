@@ -1,5 +1,5 @@
 class TeamsController < ApplicationController
-
+	# NHO: CanCanCan, nice! How could we utilize CanCanCan's helpers to dry up our controllers code?
 	def index
 		@teams = Team.all
 	end
@@ -39,7 +39,7 @@ class TeamsController < ApplicationController
 		else
 		  render :edit
 		end
-	end	
+	end
 
   	def destroy
 	    @team = Team.find(params[:id])
